@@ -10,3 +10,11 @@ class GameSavingLoader {
     return value;
   }
 }
+
+
+GameSavingLoader.load().then((saving) => {
+  const result = JSON.parse(saving);
+  return result;
+}, (error) => {
+  return new Error('Ошибка обработки!');
+});
