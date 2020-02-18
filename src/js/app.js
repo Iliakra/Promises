@@ -14,6 +14,5 @@ export default class GameSavingLoader {
 GameSavingLoader.load().then((saving) => {
   const result = JSON.parse(saving);
   return result;
-}, (error) => {
-  return new Error('Ошибка обработки!');
-});
+// eslint-disable-next-line no-unused-vars
+}, (error) => new Error('Ошибка обработки!'));
